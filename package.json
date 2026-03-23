@@ -17,5 +17,10 @@
         "path": "./themes/Black Orange-black-orange-color-theme.json"
       }
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AnrzejAF/vscode_ext.git"
   }
+
 }
