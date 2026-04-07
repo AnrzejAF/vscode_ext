@@ -1,8 +1,8 @@
 {
   "name": "anrzej-themes",
   "icon": "images/black_orange_icon_128_128.jpg",
-  "displayName": "Anrzej Themes",
-  "description": "A collection of themes for Visual Studio Code created by Anrzej.",
+  "displayName": "Anrzej Color Themes",
+  "description": "A curated collection of VS Code color themes by Anrzej, including Black Orange.",
   "version": "0.1.0",
   "engines": {
     "vscode": "^1.110.0"
@@ -10,6 +10,20 @@
   "categories": [
     "Themes"
   ],
+  "keywords": [
+    "theme",
+    "themes",
+    "color theme",
+    "dark theme",
+    "black orange",
+    "orange",
+    "dark",
+    "vscode theme"
+  ],
+  "galleryBanner": {
+    "color": "#0f0f0f",
+    "theme": "dark"
+  },
   "contributes": {
     "themes": [
       {
@@ -23,9 +37,14 @@
     "type": "git",
     "url": "https://github.com/AnrzejAF/vscode_ext.git"
   },
+  "homepage": "https://github.com/AnrzejAF/vscode_ext",
+  "bugs": {
+    "url": "https://github.com/AnrzejAF/vscode_ext/issues"
+  },
   "pricing": "Free",
   "publisher": "Anrzej",
   "devDependencies": {
     "@vscode/vsce": "^3.7.1"
-  }
+  },
+  "license": "MIT"
 }
