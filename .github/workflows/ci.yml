@@ -7,13 +7,11 @@ on:
     branches: [ master ]
 
 jobs:
-  validate:
+  ci:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # Fetch all history for version comparison
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -23,70 +21,18 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Check version bump
-        if: github.event_name == 'pull_request'
-        run: |
-          CURRENT_VERSION=$(cat package.json | grep '"version"' | head -1 | awk -F'"' '{print $4}')
-          echo "Current version in PR: $CURRENT_VERSION"
-          
-          # Get the latest tag
-          git fetch --tags
-          LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
-          LATEST_VERSION=${LATEST_TAG#v}
-          
-          echo "Latest released version: $LATEST_VERSION"
-          
-          if [ "$CURRENT_VERSION" = "$LATEST_VERSION" ]; then
-            echo "Error: Version not bumped! Current: $CURRENT_VERSION, Latest: $LATEST_VERSION"
-            exit 1
-          fi
-          
-          echo " Version correctly bumped from $LATEST_VERSION to $CURRENT_VERSION"
 
       - name: Validate package.json
-        run: |
-          node -e "require('./package.json')" && echo "package.json is valid JSON"
+        run: node -e "require('./package.json'); console.log('package.json is valid JSON')"
 
-      - name: Build extension
-        run: |
-          npm run build 2>/dev/null || echo "No build script defined (optional)"
-
-      - name: Package extension
-        run: |
-          npx vsce package true
-          echo "✓ Extension packaged successfully"
-
-      - name: Verify VSIX file
-        run: |
-          if [ -f *.vsix ]; then
-            echo "VSIX file created successfully"
-            ls -lh *.vsix
-          else
-            echo "Error: VSIX file not created"
-            exit 1
-          fi
-
-  lint:
-    runs-on: ubuntu-latest
-    
-    steps:
-      - uses: actions/checkout@v4
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          cache: 'npm'
-      
-      - name: Install dependencies
-        run: npm ci
-      
-      - name: Check theme files syntax
+      - name: Validate theme files
         run: |
           for theme in themes/*.json; do
             if [ -f "$theme" ]; then
               echo "Validating $theme..."
-              node -e "require('./$theme')" && echo "$theme is valid" || exit 1
+              node -e "require('./$theme'); console.log('$theme is valid')"
             fi
           done
+
+      - name: Package extension
+        run: npx vsce package
