@@ -3,7 +3,7 @@
   "icon": "images/black_orange_icon_128_128.jpg",
   "displayName": "Anrzej Color Themes",
   "description": "A curated collection of VS Code color themes by Anrzej, including Black Orange.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "engines": {
     "vscode": "^1.110.0"
   },
