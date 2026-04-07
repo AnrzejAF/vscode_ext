@@ -24,7 +24,7 @@
   },
   "pricing": "Free",
   "publisher": "Anrzej",
-  "dependencies": {
+  "devDependencies": {
     "@vscode/vsce": "^3.7.1"
   }
 }

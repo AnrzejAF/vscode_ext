@@ -1,16 +1,20 @@
-# anrzej-themes README
+# Anrzej Themes
 
-## Working with Markdown
+A VS Code theme extension with custom color schemes.
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+## Installation
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+1. Open VS Code
+2. Go to Extensions (Ctrl+Shift+X)
+3. Search for "Anrzej Themes"
+4. Click Install
 
-## For more information
+## Features
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+- Custom color palette
+- Optimized for readability
+- Support for syntax highlighting
 
-**Enjoy!**
+## License
+
+MIT
