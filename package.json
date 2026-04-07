@@ -1,5 +1,6 @@
 {
   "name": "anrzej-themes",
+  "icon": "images/black_orange_icon_128_128.jpg",
   "displayName": "Anrzej Themes",
   "description": "A collection of themes for Visual Studio Code created by Anrzej.",
   "version": "0.0.4",

@@ -6,3 +6,5 @@
 node_modules/**
 package-lock.json
 vsc-extension-quickstart.md
+**/black_orange_icon.jpg
+.codex
