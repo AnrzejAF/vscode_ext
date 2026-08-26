@@ -4,6 +4,10 @@ All notable changes to the "anrzej-themes" extension will be documented in this 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.1.2] - 2026-08-26
+
+- Version bump to 0.1.2
+  
 ## [0.1.1] - 2026-04-07
 
 - Version bump to 0.1.1
