@@ -35,11 +35,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AnrzejAF/vscode_ext.git"
+    "url": "https://github.com/AnrzejAF/anrzej_themes_vsc_ext.git"
   },
-  "homepage": "https://github.com/AnrzejAF/vscode_ext",
+  "homepage": "https://github.com/AnrzejAF/anrzej_themes_vsc_ext",
   "bugs": {
-    "url": "https://github.com/AnrzejAF/vscode_ext/issues"
+    "url": "https://github.com/AnrzejAF/anrzej_themes_vsc_ext/issues"
   },
   "pricing": "Free",
   "publisher": "Anrzej",
